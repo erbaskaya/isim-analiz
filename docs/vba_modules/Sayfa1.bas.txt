@@ -1,0 +1,32 @@
+Attribute VB_Name = "Sayfa1"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Attribute VB_Control = "cbTumunuHesapla, 1, 0, MSForms, CommandButton"
+Attribute VB_Control = "cbTemizle, 2, 1, MSForms, CommandButton"
+Attribute VB_Control = "lstSureListesi, 4, 2, MSForms, ListBox"
+
+Private Sub cbTemizle_Click()
+Module9.VeriTemizle
+End Sub
+
+Private Sub cbTumunuHesapla_Click()
+Module1.ArapcaIsmiTemizleVeAltAltaYazBaba1
+Module1.ArapcaIsmiTemizleVeAltAltaYazBaba2
+Module2.ArapcaIsmiTemizleVeAltAltaYazAnne1
+Module2.ArapcaIsmiTemizleVeAltAltaYazAnne2
+Module3.ArapcaIsmiTemizleVeAltAltaYazCocuk1
+Module3.ArapcaIsmiTemizleVeAltAltaYazCocuk2
+Module4.CocukFikir
+Module4.CocukAkil
+Module7.HesaplamaYap
+Module5.ListeyiGuncelle
+End Sub
+
+Private Sub lstSureListesi_Click()
+
+End Sub

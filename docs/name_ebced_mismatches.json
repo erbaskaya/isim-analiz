@@ -1,0 +1,499 @@
+[
+  {
+    "name": "Abdullah",
+    "arabic": "عبدالله",
+    "registeredEbced": 143,
+    "elementTableEbced": 142,
+    "unknownChars": ""
+  },
+  {
+    "name": "Abdurrahim",
+    "arabic": "عبدالررحمن",
+    "registeredEbced": 565,
+    "elementTableEbced": 605,
+    "unknownChars": ""
+  },
+  {
+    "name": "Abdurrahman",
+    "arabic": "عبدالررحمن",
+    "registeredEbced": 405,
+    "elementTableEbced": 605,
+    "unknownChars": ""
+  },
+  {
+    "name": "Ajda",
+    "arabic": "اژدا",
+    "registeredEbced": 13,
+    "elementTableEbced": 6,
+    "unknownChars": "ژ"
+  },
+  {
+    "name": "Alpcan",
+    "arabic": "اﻟﺐجان",
+    "registeredEbced": 87,
+    "elementTableEbced": 55,
+    "unknownChars": "ﻟﺐ"
+  },
+  {
+    "name": "Alper",
+    "arabic": "الپر",
+    "registeredEbced": 233,
+    "elementTableEbced": 231,
+    "unknownChars": "پ"
+  },
+  {
+    "name": "Arif",
+    "arabic": "عارف",
+    "registeredEbced": 341,
+    "elementTableEbced": 351,
+    "unknownChars": ""
+  },
+  {
+    "name": "Arife",
+    "arabic": "عارفه",
+    "registeredEbced": 346,
+    "elementTableEbced": 356,
+    "unknownChars": ""
+  },
+  {
+    "name": "Atilla",
+    "arabic": "اتيلاا",
+    "registeredEbced": 272,
+    "elementTableEbced": 443,
+    "unknownChars": ""
+  },
+  {
+    "name": "Aykutalp",
+    "arabic": "ايقود الپ",
+    "registeredEbced": 154,
+    "elementTableEbced": 152,
+    "unknownChars": "پ"
+  },
+  {
+    "name": "Ayşe",
+    "arabic": "عاءشه",
+    "registeredEbced": 376,
+    "elementTableEbced": 377,
+    "unknownChars": ""
+  },
+  {
+    "name": "Ayşegül",
+    "arabic": "عاءشه كل",
+    "registeredEbced": 426,
+    "elementTableEbced": 427,
+    "unknownChars": ""
+  },
+  {
+    "name": "Ayşenur",
+    "arabic": "عاءشهنور",
+    "registeredEbced": 632,
+    "elementTableEbced": 633,
+    "unknownChars": ""
+  },
+  {
+    "name": "Aytunç",
+    "arabic": "ايتونچ",
+    "registeredEbced": 469,
+    "elementTableEbced": 467,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Bora",
+    "arabic": "بورا",
+    "registeredEbced": 438,
+    "elementTableEbced": 209,
+    "unknownChars": ""
+  },
+  {
+    "name": "Canan",
+    "arabic": "جانان",
+    "registeredEbced": 115,
+    "elementTableEbced": 105,
+    "unknownChars": ""
+  },
+  {
+    "name": "Cemalettin",
+    "arabic": "جمال الدين",
+    "registeredEbced": 173,
+    "elementTableEbced": 169,
+    "unknownChars": ""
+  },
+  {
+    "name": "Çağla",
+    "arabic": "چاغلا",
+    "registeredEbced": 1035,
+    "elementTableEbced": 1032,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Çiçek",
+    "arabic": "چيچك",
+    "registeredEbced": 36,
+    "elementTableEbced": 30,
+    "unknownChars": "چچ"
+  },
+  {
+    "name": "Çiğdem",
+    "arabic": "چيكدم",
+    "registeredEbced": 77,
+    "elementTableEbced": 74,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Deniz",
+    "arabic": "دكيز",
+    "registeredEbced": 42,
+    "elementTableEbced": 41,
+    "unknownChars": ""
+  },
+  {
+    "name": "Dursüne",
+    "arabic": "دورسونه",
+    "registeredEbced": 330,
+    "elementTableEbced": 331,
+    "unknownChars": ""
+  },
+  {
+    "name": "Elvan",
+    "arabic": "الف",
+    "registeredEbced": 88,
+    "elementTableEbced": 111,
+    "unknownChars": ""
+  },
+  {
+    "name": "Fatma",
+    "arabic": "فاطمة",
+    "registeredEbced": 135,
+    "elementTableEbced": 530,
+    "unknownChars": ""
+  },
+  {
+    "name": "Fırat",
+    "arabic": "فرات",
+    "registeredEbced": 671,
+    "elementTableEbced": 681,
+    "unknownChars": ""
+  },
+  {
+    "name": "Fuat",
+    "arabic": "فؤاد",
+    "registeredEbced": 91,
+    "elementTableEbced": 85,
+    "unknownChars": "ؤ"
+  },
+  {
+    "name": "Gazali",
+    "arabic": "غزالي",
+    "registeredEbced": 1741,
+    "elementTableEbced": 1048,
+    "unknownChars": ""
+  },
+  {
+    "name": "Gökçe",
+    "arabic": "كوكچه",
+    "registeredEbced": 54,
+    "elementTableEbced": 51,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Gökhan",
+    "arabic": "كوكحان",
+    "registeredEbced": 697,
+    "elementTableEbced": 105,
+    "unknownChars": ""
+  },
+  {
+    "name": "Gönül",
+    "arabic": "كوڭل",
+    "registeredEbced": 76,
+    "elementTableEbced": 56,
+    "unknownChars": "ڭ"
+  },
+  {
+    "name": "Gülay",
+    "arabic": "كُلاي",
+    "registeredEbced": 61,
+    "elementTableEbced": 61,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Gülcan",
+    "arabic": "كُلجان",
+    "registeredEbced": 104,
+    "elementTableEbced": 104,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Gülizar",
+    "arabic": "كُلعذار",
+    "registeredEbced": 328,
+    "elementTableEbced": 1021,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Güllü",
+    "arabic": "كُللو",
+    "registeredEbced": 86,
+    "elementTableEbced": 86,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Gülser",
+    "arabic": "كُلسر",
+    "registeredEbced": 310,
+    "elementTableEbced": 310,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Gülseren",
+    "arabic": "كُلسرن",
+    "registeredEbced": 360,
+    "elementTableEbced": 360,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Gülşah",
+    "arabic": "كلشاه",
+    "registeredEbced": 359,
+    "elementTableEbced": 356,
+    "unknownChars": ""
+  },
+  {
+    "name": "Gülten",
+    "arabic": "كُلتن",
+    "registeredEbced": 500,
+    "elementTableEbced": 500,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Havva",
+    "arabic": "حواء",
+    "registeredEbced": 21,
+    "elementTableEbced": 16,
+    "unknownChars": ""
+  },
+  {
+    "name": "İlknur",
+    "arabic": "ايلكنور",
+    "registeredEbced": 217,
+    "elementTableEbced": 317,
+    "unknownChars": ""
+  },
+  {
+    "name": "İmren",
+    "arabic": "إمرن",
+    "registeredEbced": 291,
+    "elementTableEbced": 290,
+    "unknownChars": "إ"
+  },
+  {
+    "name": "Kıymet",
+    "arabic": "قيمة",
+    "registeredEbced": 155,
+    "elementTableEbced": 550,
+    "unknownChars": ""
+  },
+  {
+    "name": "Mediha",
+    "arabic": "ممديحه",
+    "registeredEbced": 67,
+    "elementTableEbced": 107,
+    "unknownChars": ""
+  },
+  {
+    "name": "Melis",
+    "arabic": "مَليس",
+    "registeredEbced": 140,
+    "elementTableEbced": 140,
+    "unknownChars": "َ"
+  },
+  {
+    "name": "Nadire",
+    "arabic": "نادره",
+    "registeredEbced": 257,
+    "elementTableEbced": 260,
+    "unknownChars": ""
+  },
+  {
+    "name": "Naile",
+    "arabic": "نائله",
+    "registeredEbced": 87,
+    "elementTableEbced": 86,
+    "unknownChars": "ئ"
+  },
+  {
+    "name": "Naime",
+    "arabic": "نائمه",
+    "registeredEbced": 97,
+    "elementTableEbced": 96,
+    "unknownChars": "ئ"
+  },
+  {
+    "name": "Nazlı",
+    "arabic": "نازلي",
+    "registeredEbced": 351,
+    "elementTableEbced": 98,
+    "unknownChars": ""
+  },
+  {
+    "name": "Neriman",
+    "arabic": "نريمان",
+    "registeredEbced": 1005,
+    "elementTableEbced": 351,
+    "unknownChars": ""
+  },
+  {
+    "name": "Nevzat",
+    "arabic": "نوزاد",
+    "registeredEbced": 70,
+    "elementTableEbced": 68,
+    "unknownChars": ""
+  },
+  {
+    "name": "Nimet",
+    "arabic": "نعمت",
+    "registeredEbced": 460,
+    "elementTableEbced": 560,
+    "unknownChars": ""
+  },
+  {
+    "name": "Nurşen",
+    "arabic": "نورشن",
+    "registeredEbced": 660,
+    "elementTableEbced": 606,
+    "unknownChars": ""
+  },
+  {
+    "name": "Oruç",
+    "arabic": "اوروچ",
+    "registeredEbced": 216,
+    "elementTableEbced": 213,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Özgünaz",
+    "arabic": "اوزكو ناز",
+    "registeredEbced": 99,
+    "elementTableEbced": 98,
+    "unknownChars": ""
+  },
+  {
+    "name": "Rabia",
+    "arabic": "رابعه",
+    "registeredEbced": 282,
+    "elementTableEbced": 278,
+    "unknownChars": ""
+  },
+  {
+    "name": "Rahmet",
+    "arabic": "رحمة",
+    "registeredEbced": 253,
+    "elementTableEbced": 648,
+    "unknownChars": ""
+  },
+  {
+    "name": "Rümeysa",
+    "arabic": "رُميسا",
+    "registeredEbced": 311,
+    "elementTableEbced": 311,
+    "unknownChars": "ُ"
+  },
+  {
+    "name": "Saime",
+    "arabic": "صائمه",
+    "registeredEbced": 137,
+    "elementTableEbced": 136,
+    "unknownChars": "ئ"
+  },
+  {
+    "name": "Seçil",
+    "arabic": "سچيل",
+    "registeredEbced": 103,
+    "elementTableEbced": 100,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Selçuk",
+    "arabic": "سلچوق",
+    "registeredEbced": 199,
+    "elementTableEbced": 196,
+    "unknownChars": "چ"
+  },
+  {
+    "name": "Serap",
+    "arabic": "سراپ",
+    "registeredEbced": 263,
+    "elementTableEbced": 261,
+    "unknownChars": "پ"
+  },
+  {
+    "name": "Serpil",
+    "arabic": "سربيل",
+    "registeredEbced": 292,
+    "elementTableEbced": 302,
+    "unknownChars": ""
+  },
+  {
+    "name": "Sevda",
+    "arabic": "سوداه",
+    "registeredEbced": 71,
+    "elementTableEbced": 76,
+    "unknownChars": ""
+  },
+  {
+    "name": "Sevgi",
+    "arabic": "سَوكي",
+    "registeredEbced": 96,
+    "elementTableEbced": 96,
+    "unknownChars": "َ"
+  },
+  {
+    "name": "Sevim",
+    "arabic": "سَويم",
+    "registeredEbced": 116,
+    "elementTableEbced": 116,
+    "unknownChars": "َ"
+  },
+  {
+    "name": "Soner",
+    "arabic": "صوڭر",
+    "registeredEbced": 316,
+    "elementTableEbced": 296,
+    "unknownChars": "ڭ"
+  },
+  {
+    "name": "Songül",
+    "arabic": "صوڭكل",
+    "registeredEbced": 166,
+    "elementTableEbced": 146,
+    "unknownChars": "ڭ"
+  },
+  {
+    "name": "Taner",
+    "arabic": "تاڭر",
+    "registeredEbced": 621,
+    "elementTableEbced": 601,
+    "unknownChars": "ڭ"
+  },
+  {
+    "name": "Türkan",
+    "arabic": "توركان",
+    "registeredEbced": 477,
+    "elementTableEbced": 677,
+    "unknownChars": ""
+  },
+  {
+    "name": "Yakup",
+    "arabic": "يعقوب",
+    "registeredEbced": 198,
+    "elementTableEbced": 188,
+    "unknownChars": ""
+  },
+  {
+    "name": "Serra",
+    "arabic": "سرراء",
+    "registeredEbced": 262,
+    "elementTableEbced": 462,
+    "unknownChars": ""
+  }
+]

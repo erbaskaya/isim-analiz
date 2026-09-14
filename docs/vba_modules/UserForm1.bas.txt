@@ -1,0 +1,379 @@
+Attribute VB_Name = "UserForm1"
+Attribute VB_Base = "0{EFCEBD15-B5B5-40F3-8DF7-73C33BFCF66C}{AD1D5DB6-5629-4BC7-8409-2EA676B7AF1F}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+
+Private Sub cbAnneIsimDegerHesapla_Click()
+With ThisWorkbook.Worksheets("Hesaplama")
+
+'Harf Arapça Harfleri Alıyoruz
+Me.txtAnneArapcaHarf1.Value = Worksheets("Hesaplama").Range("I7").Value
+Me.txtAnneArapcaHarf2.Value = Worksheets("Hesaplama").Range("I8").Value
+Me.txtAnneArapcaHarf3.Value = Worksheets("Hesaplama").Range("I9").Value
+Me.txtAnneArapcaHarf4.Value = Worksheets("Hesaplama").Range("I10").Value
+Me.txtAnneArapcaHarf5.Value = Worksheets("Hesaplama").Range("I11").Value
+Me.txtAnneArapcaHarf6.Value = Worksheets("Hesaplama").Range("I12").Value
+Me.txtAnneArapcaHarf7.Value = Worksheets("Hesaplama").Range("I13").Value
+Me.txtAnneArapcaHarf8.Value = Worksheets("Hesaplama").Range("I14").Value
+Me.txtAnneArapcaHarf9.Value = Worksheets("Hesaplama").Range("I15").Value
+Me.txtAnneArapcaHarf10.Value = Worksheets("Hesaplama").Range("I16").Value
+Me.txtAnneArapcaHarf11.Value = Worksheets("Hesaplama").Range("I17").Value
+Me.txtAnneArapcaHarf12.Value = Worksheets("Hesaplama").Range("I18").Value
+Me.txtAnneArapcaHarf13.Value = Worksheets("Hesaplama").Range("I19").Value
+Me.txtAnneArapcaHarf14.Value = Worksheets("Hesaplama").Range("I20").Value
+
+
+'Harf Ebced Değerleri Alıyoruz
+Me.txtAnneHarfEbced1.Value = Worksheets("Hesaplama").Range("J7").Value
+Me.txtAnneHarfEbced2.Value = Worksheets("Hesaplama").Range("J8").Value
+Me.txtAnneHarfEbced3.Value = Worksheets("Hesaplama").Range("J9").Value
+Me.txtAnneHarfEbced4.Value = Worksheets("Hesaplama").Range("J10").Value
+Me.txtAnneHarfEbced5.Value = Worksheets("Hesaplama").Range("J11").Value
+Me.txtAnneHarfEbced6.Value = Worksheets("Hesaplama").Range("J12").Value
+Me.txtAnneHarfEbced7.Value = Worksheets("Hesaplama").Range("J13").Value
+Me.txtAnneHarfEbced8.Value = Worksheets("Hesaplama").Range("J14").Value
+Me.txtAnneHarfEbced9.Value = Worksheets("Hesaplama").Range("J15").Value
+Me.txtAnneHarfEbced10.Value = Worksheets("Hesaplama").Range("J16").Value
+Me.txtAnneHarfEbced11.Value = Worksheets("Hesaplama").Range("J17").Value
+Me.txtAnneHarfEbced12.Value = Worksheets("Hesaplama").Range("J18").Value
+Me.txtAnneHarfEbced13.Value = Worksheets("Hesaplama").Range("J19").Value
+Me.txtAnneHarfEbced14.Value = Worksheets("Hesaplama").Range("J20").Value
+
+
+'Harf Element Değerleri Alıyoruz
+Me.txtAnneHarfElement1.Value = Worksheets("Hesaplama").Range("K7").Value
+Me.txtAnneHarfElement2.Value = Worksheets("Hesaplama").Range("K8").Value
+Me.txtAnneHarfElement3.Value = Worksheets("Hesaplama").Range("K9").Value
+Me.txtAnneHarfElement4.Value = Worksheets("Hesaplama").Range("K10").Value
+Me.txtAnneHarfElement5.Value = Worksheets("Hesaplama").Range("K11").Value
+Me.txtAnneHarfElement6.Value = Worksheets("Hesaplama").Range("K12").Value
+Me.txtAnneHarfElement7.Value = Worksheets("Hesaplama").Range("K13").Value
+Me.txtAnneHarfElement8.Value = Worksheets("Hesaplama").Range("K14").Value
+Me.txtAnneHarfElement9.Value = Worksheets("Hesaplama").Range("K15").Value
+Me.txtAnneHarfElement10.Value = Worksheets("Hesaplama").Range("K16").Value
+Me.txtAnneHarfElement11.Value = Worksheets("Hesaplama").Range("K17").Value
+Me.txtAnneHarfElement12.Value = Worksheets("Hesaplama").Range("K18").Value
+Me.txtAnneHarfElement13.Value = Worksheets("Hesaplama").Range("K19").Value
+Me.txtAnneHarfElement14.Value = Worksheets("Hesaplama").Range("K20").Value
+
+
+
+'Harf Dişil Eril Değerleri Alıyoruz
+Me.txtAnneHarfDisilEril1.Value = Worksheets("Hesaplama").Range("H7").Value
+Me.txtAnneHarfDisilEril2.Value = Worksheets("Hesaplama").Range("H8").Value
+Me.txtAnneHarfDisilEril3.Value = Worksheets("Hesaplama").Range("H9").Value
+Me.txtAnneHarfDisilEril4.Value = Worksheets("Hesaplama").Range("H10").Value
+Me.txtAnneHarfDisilEril5.Value = Worksheets("Hesaplama").Range("H11").Value
+Me.txtAnneHarfDisilEril6.Value = Worksheets("Hesaplama").Range("H12").Value
+Me.txtAnneHarfDisilEril7.Value = Worksheets("Hesaplama").Range("H13").Value
+Me.txtAnneHarfDisilEril8.Value = Worksheets("Hesaplama").Range("H14").Value
+Me.txtAnneHarfDisilEril9.Value = Worksheets("Hesaplama").Range("H15").Value
+Me.txtAnneHarfDisilEril10.Value = Worksheets("Hesaplama").Range("H16").Value
+Me.txtAnneHarfDisilEril11.Value = Worksheets("Hesaplama").Range("H17").Value
+Me.txtAnneHarfDisilEril12.Value = Worksheets("Hesaplama").Range("H18").Value
+Me.txtAnneHarfDisilEril13.Value = Worksheets("Hesaplama").Range("H19").Value
+Me.txtAnneHarfDisilEril14.Value = Worksheets("Hesaplama").Range("H20").Value
+
+
+'İsim Değerlendirme Değerleri Alıyoruz
+Me.txtAnneEbcedToplami.Value = Worksheets("Hesaplama").Range("L11").Value
+Me.txtAnneSuDegerToplami.Value = Worksheets("Hesaplama").Range("M17").Value
+Me.txtAnneHavaDegerToplami.Value = Worksheets("Hesaplama").Range("M15").Value
+Me.txtAnneToprakDegerToplami.Value = Worksheets("Hesaplama").Range("M13").Value
+Me.txtAnneAtesDegerToplami.Value = Worksheets("Hesaplama").Range("M19").Value
+Me.txtAnneDisilDegerToplami.Value = Worksheets("Hesaplama").Range("U26").Value
+Me.txtAnneErilDegerToplami.Value = Worksheets("Hesaplama").Range("U24").Value
+
+End With
+End Sub
+
+Private Sub cbAnneIsmiGonder_Click()
+
+
+'Türkçe isim 1 yazıyoruz gönderiyoruz
+Worksheets("Hesaplama").Range("H6").Value = UserForm1.txtAnneIsmiTurkce1.Value
+UserForm1.txtAnneIsmiArapca1.Value = Worksheets("Hesaplama").Range("I6").Value
+
+'Türkçe isim 2 yazıyoruz gönderiyoruz
+Worksheets("Hesaplama").Range("H25").Value = UserForm1.txtAnneIsmiTurkce2.Value
+UserForm1.txtAnneIsmiArapca2.Value = Worksheets("Hesaplama").Range("I25").Value
+
+
+Module2.ArapcaIsmiTemizleVeAltAltaYazAnne1
+On Error Resume Next
+Module2.ArapcaIsmiTemizleVeAltAltaYazAnne2
+On Error Resume Next
+cbAnneIsimDegerHesapla_Click
+
+
+End Sub
+
+Private Sub cbCocukIsimDegerHesapla_Click()
+With ThisWorkbook.Worksheets("Hesaplama")
+
+'Harf Arapça Harfleri Alıyoruz
+UserForm1.txtCocukArapcaHarf1.Value = Worksheets("Hesaplama").Range("O7").Value
+UserForm1.txtCocukArapcaHarf2.Value = Worksheets("Hesaplama").Range("O8").Value
+UserForm1.txtCocukArapcaHarf3.Value = Worksheets("Hesaplama").Range("O9").Value
+UserForm1.txtCocukArapcaHarf4.Value = Worksheets("Hesaplama").Range("O10").Value
+UserForm1.txtCocukArapcaHarf5.Value = Worksheets("Hesaplama").Range("O11").Value
+UserForm1.txtCocukArapcaHarf6.Value = Worksheets("Hesaplama").Range("O12").Value
+UserForm1.txtCocukArapcaHarf7.Value = Worksheets("Hesaplama").Range("O13").Value
+UserForm1.txtCocukArapcaHarf8.Value = Worksheets("Hesaplama").Range("O14").Value
+UserForm1.txtCocukArapcaHarf9.Value = Worksheets("Hesaplama").Range("O15").Value
+UserForm1.txtCocukArapcaHarf10.Value = Worksheets("Hesaplama").Range("O16").Value
+UserForm1.txtCocukArapcaHarf11.Value = Worksheets("Hesaplama").Range("O17").Value
+UserForm1.txtCocukArapcaHarf12.Value = Worksheets("Hesaplama").Range("O18").Value
+UserForm1.txtCocukArapcaHarf13.Value = Worksheets("Hesaplama").Range("O19").Value
+UserForm1.txtCocukArapcaHarf14.Value = Worksheets("Hesaplama").Range("O20").Value
+
+
+'Harf Ebced Değerleri Alıyoruz
+Me.txtCocukHarfEbced1.Value = Worksheets("Hesaplama").Range("P7").Value
+Me.txtCocukHarfEbced2.Value = Worksheets("Hesaplama").Range("P8").Value
+Me.txtCocukHarfEbced3.Value = Worksheets("Hesaplama").Range("P9").Value
+Me.txtCocukHarfEbced4.Value = Worksheets("Hesaplama").Range("P10").Value
+Me.txtCocukHarfEbced5.Value = Worksheets("Hesaplama").Range("P11").Value
+Me.txtCocukHarfEbced6.Value = Worksheets("Hesaplama").Range("P12").Value
+Me.txtCocukHarfEbced7.Value = Worksheets("Hesaplama").Range("P13").Value
+Me.txtCocukHarfEbced8.Value = Worksheets("Hesaplama").Range("P14").Value
+Me.txtCocukHarfEbced9.Value = Worksheets("Hesaplama").Range("P15").Value
+Me.txtCocukHarfEbced10.Value = Worksheets("Hesaplama").Range("P16").Value
+Me.txtCocukHarfEbced11.Value = Worksheets("Hesaplama").Range("P17").Value
+Me.txtCocukHarfEbced12.Value = Worksheets("Hesaplama").Range("P18").Value
+Me.txtCocukHarfEbced13.Value = Worksheets("Hesaplama").Range("P19").Value
+Me.txtCocukHarfEbced14.Value = Worksheets("Hesaplama").Range("P20").Value
+
+
+'Harf Element Değerleri Alıyoruz
+Me.txtCocukHarfElement1.Value = Worksheets("Hesaplama").Range("Q7").Value
+Me.txtCocukHarfElement2.Value = Worksheets("Hesaplama").Range("Q8").Value
+Me.txtCocukHarfElement3.Value = Worksheets("Hesaplama").Range("Q9").Value
+Me.txtCocukHarfElement4.Value = Worksheets("Hesaplama").Range("Q10").Value
+Me.txtCocukHarfElement5.Value = Worksheets("Hesaplama").Range("Q11").Value
+Me.txtCocukHarfElement6.Value = Worksheets("Hesaplama").Range("Q12").Value
+Me.txtCocukHarfElement7.Value = Worksheets("Hesaplama").Range("Q13").Value
+Me.txtCocukHarfElement8.Value = Worksheets("Hesaplama").Range("Q14").Value
+Me.txtCocukHarfElement9.Value = Worksheets("Hesaplama").Range("Q15").Value
+Me.txtCocukHarfElement10.Value = Worksheets("Hesaplama").Range("Q16").Value
+Me.txtCocukHarfElement11.Value = Worksheets("Hesaplama").Range("Q17").Value
+Me.txtCocukHarfElement12.Value = Worksheets("Hesaplama").Range("Q18").Value
+Me.txtCocukHarfElement13.Value = Worksheets("Hesaplama").Range("Q19").Value
+Me.txtCocukHarfElement14.Value = Worksheets("Hesaplama").Range("Q20").Value
+
+
+
+'Harf Dişil Eril Değerleri Alıyoruz
+Me.txtCocukHarfDisilEril1.Value = Worksheets("Hesaplama").Range("N7").Value
+Me.txtCocukHarfDisilEril2.Value = Worksheets("Hesaplama").Range("N8").Value
+Me.txtCocukHarfDisilEril3.Value = Worksheets("Hesaplama").Range("N9").Value
+Me.txtCocukHarfDisilEril4.Value = Worksheets("Hesaplama").Range("N10").Value
+Me.txtCocukHarfDisilEril5.Value = Worksheets("Hesaplama").Range("N11").Value
+Me.txtCocukHarfDisilEril6.Value = Worksheets("Hesaplama").Range("N12").Value
+Me.txtCocukHarfDisilEril7.Value = Worksheets("Hesaplama").Range("N13").Value
+Me.txtCocukHarfDisilEril8.Value = Worksheets("Hesaplama").Range("N14").Value
+Me.txtCocukHarfDisilEril9.Value = Worksheets("Hesaplama").Range("N15").Value
+Me.txtCocukHarfDisilEril10.Value = Worksheets("Hesaplama").Range("N16").Value
+Me.txtCocukHarfDisilEril11.Value = Worksheets("Hesaplama").Range("N17").Value
+Me.txtCocukHarfDisilEril12.Value = Worksheets("Hesaplama").Range("N18").Value
+Me.txtCocukHarfDisilEril13.Value = Worksheets("Hesaplama").Range("N19").Value
+Me.txtCocukHarfDisilEril14.Value = Worksheets("Hesaplama").Range("N20").Value
+
+
+'İsim Değerlendirme Değerleri Alıyoruz
+Me.txtCocukEbcedToplami.Value = Worksheets("Hesaplama").Range("R10").Value
+Me.txtCocukSuDegerToplami.Value = Worksheets("Hesaplama").Range("S17").Value
+Me.txtCocukHavaDegerToplami.Value = Worksheets("Hesaplama").Range("S15").Value
+Me.txtCocukToprakDegerToplami.Value = Worksheets("Hesaplama").Range("S13").Value
+Me.txtCocukAtesDegerToplami.Value = Worksheets("Hesaplama").Range("S19").Value
+Me.txtCocukDisilDegerToplami.Value = Worksheets("Hesaplama").Range("V26").Value
+Me.txtCocukErilDegerToplami.Value = Worksheets("Hesaplama").Range("V24").Value
+
+'Çocuk anne Değerlendirme Değerleri Alıyoruz
+Me.txtCocukAnneDEDegeri.Value = Worksheets("Hesaplama").Range("T29").Value
+Me.txtCocukAnneAkilDegeri2.Value = Worksheets("Hesaplama").Range("Y6").Value
+Me.txtCocukAnneFrekansSure.Value = Worksheets("Hesaplama").Range("T31").Value
+Me.txtCocukAnneAkilDegeri.Value = Worksheets("Hesaplama").Range("Y6").Value
+Me.txtCocukAnneFikirDegeri.Value = Worksheets("Hesaplama").Range("V6").Value
+Me.txtCocukAnneBurc.Value = Worksheets("Hesaplama").Range("AB6").Value
+Me.txtCocukErilDegerToplami.Value = Worksheets("Hesaplama").Range("V24").Value
+Me.txtAkilDegeriAciklama.Value = Worksheets("Hesaplama").Range("W16").Value
+Me.txtFikirDegeriAciklama.Value = Worksheets("Hesaplama").Range("T16").Value
+Me.txtBurcDegeriAciklama.Value = Worksheets("Hesaplama").Range("Z16").Value
+
+
+End With
+End Sub
+
+Private Sub cbCocukIsmiGonder_Click()
+With ThisWorkbook.Worksheets("Hesaplama")
+
+'Türkçe isim 1 yazıyoruz gönderiyoruz
+.Range("N6").Value = Me.txtCocukIsmiTurkce1.Value
+Me.txtCocukIsmiArapca1.Value = Worksheets("Hesaplama").Range("O6").Value
+
+'Türkçe isim 2 yazıyoruz gönderiyoruz
+.Range("N25").Value = Me.txtCocukIsmiTurkce2.Value
+Me.txtCocukIsmiArapca2.Value = Worksheets("Hesaplama").Range("O25").Value
+
+End With
+Module3.ArapcaIsmiTemizleVeAltAltaYazCocuk1
+On Error Resume Next
+Module3.ArapcaIsmiTemizleVeAltAltaYazCocuk2
+On Error Resume Next
+cbCocukIsimDegerHesapla_Click
+
+Module4.CocukFikir
+Module4.CocukAkil
+
+End Sub
+
+Private Sub cbDogumTarihiHesapla_Click()
+
+    ' Kodun daha okunaklı ve hızlı çalışması için "Hesaplama" sayfası ile çalışacağımızı belirtiyoruz.
+    With ThisWorkbook.Worksheets("Hesaplama")
+    
+        ' TextBox değerlerini ilgili hücrelere ata.
+        ' .Value kullanarak hücrenin değerini değiştiriyoruz.
+        ' Val() fonksiyonu, TextBox'a girilen metni sayısal bir değere çevirir.
+        ' Bu, olası hataları önlemek için iyi bir pratiktir.
+        .Range("AD3").Value = Val(Me.txtGun1.Value)
+        .Range("AE3").Value = Val(Me.txtGun2.Value)
+        .Range("AF3").Value = Val(Me.txtAy1.Value)
+        .Range("AG3").Value = Val(Me.txtAy2.Value)
+        .Range("AH3").Value = Val(Me.txtYil1.Value)
+        .Range("AI3").Value = Val(Me.txtYil2.Value)
+        .Range("AJ3").Value = Val(Me.txtYil3.Value)
+        .Range("AK3").Value = Val(Me.txtYil4.Value)
+        
+    End With
+
+    ' Değerleri hücrelere yazma işlemi bittikten sonra "HesaplamaYap" makrosunu çalıştır.
+    ' Call komutunu kullanabilir veya doğrudan makro adını yazabilirsiniz.
+    Module7.HesaplamaYap
+ 
+   txtDogumTarihiSonuc.Value = Worksheets("Hesaplama").Range("AF11").Value
+End Sub
+
+Private Sub cbBabaIsimDegerHesapla_Click()
+
+With ThisWorkbook.Worksheets("Hesaplama")
+
+'Harf Arapça Harfleri Alıyoruz
+Me.txtArapcaHarf1.Value = Worksheets("Hesaplama").Range("C7").Value
+Me.txtArapcaHarf2.Value = Worksheets("Hesaplama").Range("C8").Value
+Me.txtArapcaHarf3.Value = Worksheets("Hesaplama").Range("C9").Value
+Me.txtArapcaHarf4.Value = Worksheets("Hesaplama").Range("C10").Value
+Me.txtArapcaHarf5.Value = Worksheets("Hesaplama").Range("C11").Value
+Me.txtArapcaHarf6.Value = Worksheets("Hesaplama").Range("C12").Value
+Me.txtArapcaHarf7.Value = Worksheets("Hesaplama").Range("C13").Value
+Me.txtArapcaHarf8.Value = Worksheets("Hesaplama").Range("C14").Value
+Me.txtArapcaHarf9.Value = Worksheets("Hesaplama").Range("C15").Value
+Me.txtArapcaHarf10.Value = Worksheets("Hesaplama").Range("C16").Value
+Me.txtArapcaHarf11.Value = Worksheets("Hesaplama").Range("C17").Value
+Me.txtArapcaHarf12.Value = Worksheets("Hesaplama").Range("C18").Value
+Me.txtArapcaHarf13.Value = Worksheets("Hesaplama").Range("C19").Value
+Me.txtArapcaHarf14.Value = Worksheets("Hesaplama").Range("C20").Value
+
+
+'Harf Ebced Değerleri Alıyoruz
+Me.txtHarfEbced1.Value = Worksheets("Hesaplama").Range("D7").Value
+Me.txtHarfEbced2.Value = Worksheets("Hesaplama").Range("D8").Value
+Me.txtHarfEbced3.Value = Worksheets("Hesaplama").Range("D9").Value
+Me.txtHarfEbced4.Value = Worksheets("Hesaplama").Range("D10").Value
+Me.txtHarfEbced5.Value = Worksheets("Hesaplama").Range("D11").Value
+Me.txtHarfEbced6.Value = Worksheets("Hesaplama").Range("D12").Value
+Me.txtHarfEbced7.Value = Worksheets("Hesaplama").Range("D13").Value
+Me.txtHarfEbced8.Value = Worksheets("Hesaplama").Range("D14").Value
+Me.txtHarfEbced9.Value = Worksheets("Hesaplama").Range("D15").Value
+Me.txtHarfEbced10.Value = Worksheets("Hesaplama").Range("D16").Value
+Me.txtHarfEbced11.Value = Worksheets("Hesaplama").Range("D17").Value
+Me.txtHarfEbced12.Value = Worksheets("Hesaplama").Range("D18").Value
+Me.txtHarfEbced13.Value = Worksheets("Hesaplama").Range("D19").Value
+Me.txtHarfEbced14.Value = Worksheets("Hesaplama").Range("D20").Value
+
+
+'Harf Element Değerleri Alıyoruz
+Me.txtHarfElement1.Value = Worksheets("Hesaplama").Range("E7").Value
+Me.txtHarfElement2.Value = Worksheets("Hesaplama").Range("E8").Value
+Me.txtHarfElement3.Value = Worksheets("Hesaplama").Range("E9").Value
+Me.txtHarfElement4.Value = Worksheets("Hesaplama").Range("E10").Value
+Me.txtHarfElement5.Value = Worksheets("Hesaplama").Range("E11").Value
+Me.txtHarfElement6.Value = Worksheets("Hesaplama").Range("E12").Value
+Me.txtHarfElement7.Value = Worksheets("Hesaplama").Range("E13").Value
+Me.txtHarfElement8.Value = Worksheets("Hesaplama").Range("E14").Value
+Me.txtHarfElement9.Value = Worksheets("Hesaplama").Range("E15").Value
+Me.txtHarfElement10.Value = Worksheets("Hesaplama").Range("E16").Value
+Me.txtHarfElement11.Value = Worksheets("Hesaplama").Range("E17").Value
+Me.txtHarfElement12.Value = Worksheets("Hesaplama").Range("E18").Value
+Me.txtHarfElement13.Value = Worksheets("Hesaplama").Range("E19").Value
+Me.txtHarfElement14.Value = Worksheets("Hesaplama").Range("E20").Value
+
+
+
+'Harf Dişil Eril Değerleri Alıyoruz
+Me.txtHarfDisilEril1.Value = Worksheets("Hesaplama").Range("B7").Value
+Me.txtHarfDisilEril2.Value = Worksheets("Hesaplama").Range("B8").Value
+Me.txtHarfDisilEril3.Value = Worksheets("Hesaplama").Range("B9").Value
+Me.txtHarfDisilEril4.Value = Worksheets("Hesaplama").Range("B10").Value
+Me.txtHarfDisilEril5.Value = Worksheets("Hesaplama").Range("B11").Value
+Me.txtHarfDisilEril6.Value = Worksheets("Hesaplama").Range("B12").Value
+Me.txtHarfDisilEril7.Value = Worksheets("Hesaplama").Range("B13").Value
+Me.txtHarfDisilEril8.Value = Worksheets("Hesaplama").Range("B14").Value
+Me.txtHarfDisilEril9.Value = Worksheets("Hesaplama").Range("B15").Value
+Me.txtHarfDisilEril10.Value = Worksheets("Hesaplama").Range("B16").Value
+Me.txtHarfDisilEril11.Value = Worksheets("Hesaplama").Range("B17").Value
+Me.txtHarfDisilEril12.Value = Worksheets("Hesaplama").Range("B18").Value
+Me.txtHarfDisilEril13.Value = Worksheets("Hesaplama").Range("B19").Value
+Me.txtHarfDisilEril14.Value = Worksheets("Hesaplama").Range("B20").Value
+
+
+'İsim Değerlendirme Değerleri Alıyoruz
+Me.txtBabaEbcedToplami.Value = Worksheets("Hesaplama").Range("F10").Value
+Me.txtBabaSuDegerToplami.Value = Worksheets("Hesaplama").Range("G17").Value
+Me.txtBabaHavaDegerToplami.Value = Worksheets("Hesaplama").Range("G15").Value
+Me.txtBabaToprakDegerToplami.Value = Worksheets("Hesaplama").Range("G13").Value
+Me.txtBabaAtesDegerToplami.Value = Worksheets("Hesaplama").Range("G19").Value
+Me.txtBabaDisilDegerToplami.Value = Worksheets("Hesaplama").Range("T26").Value
+Me.txtBabaErilDegerToplami.Value = Worksheets("Hesaplama").Range("T24").Value
+
+End With
+
+End Sub
+
+Private Sub cbBabaIsmiGonder_Click()
+
+
+'Türkçe isim 1 yazıyoruz gönderiyoruz
+Worksheets("Hesaplama").Range("B6").Value = UserForm1.txtBabaIsmiTurkce1.Value
+UserForm1.txtBabaIsmiArapca1.Value = Worksheets("Hesaplama").Range("C6").Value
+
+'Türkçe isim 2 yazıyoruz gönderiyoruz
+Worksheets("Hesaplama").Range("B25").Value = Me.txtBabaIsmiTurkce2.Value
+UserForm1.txtBabaIsmiArapca1.Value = Worksheets("Hesaplama").Range("C25").Value
+
+
+Module1.ArapcaIsmiTemizleVeAltAltaYazBaba1
+On Error Resume Next
+Module1.ArapcaIsmiTemizleVeAltAltaYazBaba2
+On Error Resume Next
+cbBabaIsimDegerHesapla_Click
+
+
+End Sub
+
+Private Sub cbSureyiBul_Click()
+ListeyiGuncelle
+End Sub
+
+Private Sub lstSureBilgisi_Click()
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub

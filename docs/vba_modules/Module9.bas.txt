@@ -1,0 +1,38 @@
+Attribute VB_Name = "Module9"
+Sub VeriTemizle()
+Attribute VeriTemizle.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' VeriTemizle Makro
+'
+
+'
+    Range("B6").Select
+    Selection.ClearContents
+    Range("H6").Select
+    Selection.ClearContents
+    Range("N6").Select
+    Selection.ClearContents
+    Range("B25").Select
+    Selection.ClearContents
+    Range("H25").Select
+    Selection.ClearContents
+    Range("N25").Select
+    Selection.ClearContents
+    Range("AD3").Select
+    Selection.ClearContents
+    Range("AE3").Select
+    Selection.ClearContents
+    Range("AF3").Select
+    Selection.ClearContents
+    Range("AG3").Select
+    Selection.ClearContents
+    Range("AH3").Select
+    Selection.ClearContents
+    Range("AI3").Select
+    Selection.ClearContents
+    Range("AJ3").Select
+    Selection.ClearContents
+    Range("AK3").Select
+    Selection.ClearContents
+    Range("B6").Select
+End Sub

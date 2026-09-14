@@ -1,0 +1,81 @@
+name: Android APK Build - Tek Tik
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-apk:
+    name: Isim Analiz APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+
+      - name: JDK 17 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Android SDK kur
+        uses: android-actions/setup-android@v4
+
+      - name: Android API 37 ve Build Tools 36 kur
+        shell: bash
+        run: |
+          set -euo pipefail
+          sdkmanager "platform-tools" "platforms;android-37" "build-tools;36.0.0"
+
+      - name: Gradle 9.6 kur ve cache etkinlestir
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.6.0'
+
+      - name: Proje bilgisi
+        shell: bash
+        run: |
+          java -version
+          gradle --version
+          sdkmanager --version
+
+      - name: Debug APK derle
+        shell: bash
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+
+      - name: APK dosyasini hazirla
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          cp app/build/outputs/apk/debug/app-debug.apk dist/Isim-Analiz.apk
+          sha256sum dist/Isim-Analiz.apk > dist/Isim-Analiz.apk.sha256
+
+      - name: APK artefaktini yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: Isim-Analiz-APK
+          path: |
+            dist/Isim-Analiz.apk
+            dist/Isim-Analiz.apk.sha256
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Ozet yaz
+        if: success()
+        shell: bash
+        run: |
+          {
+            echo "## APK hazir"
+            echo ""
+            echo "Actions calismasinin altindaki **Artifacts** bolumunden **Isim-Analiz-APK** paketini indirin."
+            echo "ZIP icindeki **Isim-Analiz.apk** telefona kurulabilir debug APK'dir."
+          } >> "$GITHUB_STEP_SUMMARY"

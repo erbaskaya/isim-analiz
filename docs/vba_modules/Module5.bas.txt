@@ -1,0 +1,101 @@
+Attribute VB_Name = "Module5"
+Sub SureBul()
+    Dim dinamikDeger As String
+    
+    ' Değeri kopyala ve yapıştır
+    Range("T31").Copy
+    Range("U31").PasteSpecial Paste:=xlPasteValues
+    
+    ' U31'deki değeri al
+    dinamikDeger = Range("U31").Value
+    
+    ' Filtreyi uygula
+    Sheets("KK Bilgisi").Range("$A$1:$I$6237").AutoFilter Field:=6, _
+        Criteria1:="=" & dinamikDeger, Operator:=xlAnd
+        
+    ' Temizlik
+    Application.CutCopyMode = False
+    Sheets("Hesaplama").Select
+    Selection.ClearContents
+    ' Sheets("KK Bilgisi").Select
+    
+End Sub
+
+Public Sub ListeyiGuncelle()
+    Module5.SureBul
+    ' Bu Sub, "KK Bilgisi" sayfasındaki mevcut filtreye göre lstSureListesi'ni doldurur.
+    ' Sadece F, G, I sütunlarını gösterir
+    Dim wsKK As Worksheet
+    Dim kaynakAralik As Range
+    Dim gorunurSatirlar As Range
+    Dim satir As Range
+    Dim lstBox As Object
+    
+    ' Hedef çalışma sayfasını değişkene ata
+    Set wsKK = ThisWorkbook.Worksheets("KK Bilgisi")
+    Set lstBox = Worksheets("Hesaplama").lstSureListesi
+    
+    ' ListBox boyut ve pozisyonunu sabitle
+    With lstBox
+        .Clear ' Listeyi tamamen temizle
+        .ColumnCount = 3 ' Sadece 3 sütun göstereceğiz (F, G, I)
+        ' Sütun genişliklerini ayarlayın (F, G, I için)
+        .ColumnWidths = "60;30;150"
+        
+        ' Boyut ve pozisyon ayarları (sabit değerler)
+        .Left = 900    ' Sol kenardan uzaklık
+        .Top = 600     ' Üst kenardan uzaklık
+        .Width = 500   ' Genişlik
+        .Height = 250  ' Yükseklik
+    End With
+    
+    ' Veri aralığını tanımla (Başlıklar dahil)
+    Set kaynakAralik = wsKK.Range("$A$1:$I$6237")
+    
+    ' Hata kontrolü: Filtre sonucunda hiç veri satırı görünmüyorsa SpecialCells hata verir.
+    ' Bu hatayı atlayıp kontrolü biz yapmak için On Error kullanıyoruz.
+    On Error Resume Next
+    
+    ' Sadece görünür olan veri satırlarını (başlık hariç) bul
+    Set gorunurSatirlar = kaynakAralik.Offset(1, 0).Resize(kaynakAralik.Rows.Count - 1).SpecialCells(xlCellTypeVisible)
+    
+    ' Hata kontrolünü normale döndür
+    On Error GoTo 0
+    
+    ' Eğer filtrelenmiş (görünür) satırlar bulunduysa
+    If Not gorunurSatirlar Is Nothing Then
+        ' Her bir görünür satır için döngü başlat
+        For Each satir In gorunurSatirlar.Rows
+            ' Yeni bir satır ekle ve F sütununu (6. sütun) ilk kolona ekle
+            lstBox.AddItem satir.Cells(1, 6).Value ' F sütunu
+            
+            ' G sütununu (7. sütun) ikinci kolona ekle
+            lstBox.List(lstBox.ListCount - 1, 1) = satir.Cells(1, 7).Value ' G sütunu
+            
+            ' I sütununu (9. sütun) üçüncü kolona ekle
+            lstBox.List(lstBox.ListCount - 1, 2) = satir.Cells(1, 9).Value ' I sütunu
+        Next satir
+    Else
+        ' Eğer hiç görünür satır bulunamazsa, kullanıcıyı bilgilendir
+        lstBox.Clear
+        lstBox.AddItem "Filtrelenmiş kayıt bulunamadı."
+    End If
+    
+    ' Son kontrol: Boyut ve pozisyonu tekrar sabitle
+    With lstBox
+        .Left = 900    ' Sol kenardan uzaklık
+        .Top = 600     ' Üst kenardan uzaklık
+        .Width = 500   ' Genişlik
+        .Height = 250  ' Yükseklik
+    End With
+End Sub
+
+' Ayrı bir Sub ile ListBox'ı sabitlemek için
+Sub ListBoxBoyutSabitle()
+    With Worksheets("Hesaplama").lstSureListesi
+        .Left = 900    ' Sol kenardan uzaklık
+        .Top = 600     ' Üst kenardan uzaklık
+        .Width = 500   ' Genişlik
+        .Height = 250  ' Yükseklik
+    End With
+End Sub

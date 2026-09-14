@@ -1,0 +1,76 @@
+Attribute VB_Name = "Module4"
+Sub CocukFikir()
+    Dim metin As String
+    Dim i As Integer
+    Dim u6Deger As String
+    
+    ' Önce T7:T15 aralığını temizle
+    Range("T7:T15").ClearContents
+    ' U7:U15 aralığını da temizle
+    Range("U7:U15").ClearContents
+    
+    ' T6 hücresindeki metni al
+    metin = Range("T6").Value
+    
+    ' Metin boş değilse her harfi alt alta yaz
+    If Len(metin) > 0 Then
+        For i = 1 To Len(metin)
+            Range("T" & 6 + i).Value = Mid(metin, i, 1)
+        Next i
+    End If
+    Range("U6").Formula = "=SUM(T7:T15)"
+    
+    ' U6 değerini string olarak al
+    u6Deger = CStr(Range("U6").Value)
+    
+    ' U6 değeri kontrolü ve işlem
+    If Len(u6Deger) >= 2 Then
+        ' İki veya daha fazla rakamdan oluşuyorsa her rakamı U7:U15'e dağıt
+        For i = 1 To Len(u6Deger)
+            Range("U" & 6 + i).Value = Mid(u6Deger, i, 1)
+        Next i
+        ' V6'ya toplamı yaz
+        Range("V6").Formula = "=SUM(U7:U15)"
+    Else
+        ' Tek rakamdan oluşuyorsa direkt V6'ya yaz
+        Range("V6").Value = Range("U6").Value
+    End If
+End Sub
+
+Sub CocukAkil()
+    Dim metin As String
+    Dim i As Integer
+    Dim x6Deger As String
+    
+    ' Önce W7:W15 aralığını temizle
+    Range("W7:W15").ClearContents
+    ' X7:X15 aralığını da temizle
+    Range("X7:X15").ClearContents
+    
+    ' W6 hücresindeki metni al
+    metin = Range("W6").Value
+    
+    ' Metin boş değilse her harfi alt alta yaz
+    If Len(metin) > 0 Then
+        For i = 1 To Len(metin)
+            Range("W" & 6 + i).Value = Mid(metin, i, 1)
+        Next i
+    End If
+    Range("X6").Formula = "=SUM(W7:W15)"
+    
+    ' X6 değerini string olarak al
+    x6Deger = CStr(Range("X6").Value)
+    
+    ' X6 değeri kontrolü ve işlem
+    If Len(x6Deger) >= 2 Then
+        ' İki veya daha fazla rakamdan oluşuyorsa her rakamı X7:X15'e dağıt
+        For i = 1 To Len(x6Deger)
+            Range("X" & 6 + i).Value = Mid(x6Deger, i, 1)
+        Next i
+        ' Y6'ya toplamı yaz
+        Range("Y6").Formula = "=SUM(X7:X15)"
+    Else
+        ' Tek rakamdan oluşuyorsa direkt Y6'ya yaz
+        Range("Y6").Value = Range("X6").Value
+    End If
+End Sub

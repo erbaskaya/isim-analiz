@@ -1,0 +1,35 @@
+Attribute VB_Name = "Module1"
+Sub ArapcaIsmiTemizleVeAltAltaYazBaba1()
+    Dim metin As String
+    Dim i As Integer
+
+    ' Önce C7:C20 aralığını temizle
+    Range("C7:C20").ClearContents
+
+    ' C6 hücresindeki metni al
+    metin = Range("C6").Value
+
+    ' Metin boş değilse her harfi alt alta yaz
+    If Len(metin) > 0 Then
+        For i = 1 To Len(metin)
+            Range("C" & 6 + i).Value = Mid(metin, i, 1)
+        Next i
+    End If
+End Sub
+Sub ArapcaIsmiTemizleVeAltAltaYazBaba2()
+    Dim metin As String
+    Dim i As Integer
+
+    ' Önce C26:C39 aralığını temizle
+    Range("C26:C39").ClearContents
+
+    ' C6 hücresindeki metni al
+    metin = Range("C25").Value
+
+    ' Metin boş değilse her harfi alt alta yaz
+    If Len(metin) > 0 Then
+        For i = 1 To Len(metin)
+            Range("C" & 25 + i).Value = Mid(metin, i, 1)
+        Next i
+    End If
+End Sub

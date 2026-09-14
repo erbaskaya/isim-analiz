@@ -1,0 +1,102 @@
+Attribute VB_Name = "Module7"
+Sub HesaplamaYap()
+    Dim toplam As Integer
+    Dim rakam1 As Integer, rakam2 As Integer
+    Dim strToplam As String
+    Dim i As Integer
+    
+    ' İlk bölüm: AD3 + AE3 = AD4
+    toplam = Range("AD3").Value + Range("AE3").Value
+    Range("AD4").Value = toplam
+    
+    ' AD4'teki değeri AD5 ve AE5'e ayrı ayrı yazma
+    strToplam = CStr(toplam)
+    If Len(strToplam) = 2 Then
+        Range("AD5").Value = CInt(Left(strToplam, 1))
+        Range("AE5").Value = CInt(Right(strToplam, 1))
+    ElseIf Len(strToplam) = 1 Then
+        Range("AD5").Value = 0
+        Range("AE5").Value = CInt(strToplam)
+    End If
+    
+    ' AD5 + AE5 = AD6
+    Range("AD6").Value = Range("AD5").Value + Range("AE5").Value
+    
+    ' İkinci bölüm: AH3:AK3 toplamı = AH4
+    toplam = 0
+    For i = 1 To 4 ' AH, AI, AJ, AK (4 hücre)
+        toplam = toplam + Cells(3, 34 + i - 1).Value ' 34 = AH sütunu
+    Next i
+    Range("AH4").Value = toplam
+    
+    ' AH4'teki değeri AH5'ten başlayarak yan yana dağıtma
+    strToplam = CStr(toplam)
+    For i = 1 To Len(strToplam)
+        Cells(5, 33 + i).Value = CInt(Mid(strToplam, i, 1)) ' 33+1=34 (AH), 33+2=35 (AI), vs.
+    Next i
+    
+    ' Kalan hücreleri temizle (eğer önceki değer daha uzunsa)
+    For i = Len(strToplam) + 1 To 4
+        Cells(5, 33 + i).Value = ""
+    Next i
+    
+    ' AH5:AK5 toplamı = AH6
+    toplam = 0
+    For i = 1 To 4
+        If IsNumeric(Cells(5, 33 + i).Value) Then
+            toplam = toplam + Cells(5, 33 + i).Value
+        End If
+    Next i
+    Range("AH6").Value = toplam
+    
+    ' AH6'daki değer kontrolü
+    strToplam = CStr(toplam)
+    If Len(strToplam) = 2 Then
+        ' İki rakamdan oluşuyorsa AH7'den başlayarak dağıt
+        For i = 1 To Len(strToplam)
+            Cells(7, 33 + i).Value = CInt(Mid(strToplam, i, 1))
+        Next i
+        
+        ' Kalan hücreleri temizle
+        For i = Len(strToplam) + 1 To 4
+            Cells(7, 33 + i).Value = ""
+        Next i
+        
+        ' AH7:AK7 toplamı = AH8
+        toplam = 0
+        For i = 1 To 4
+            If IsNumeric(Cells(7, 33 + i).Value) Then
+                toplam = toplam + Cells(7, 33 + i).Value
+            End If
+        Next i
+        Range("AH8").Value = toplam
+    Else
+        ' Tek rakamdan oluşuyorsa direkt AH8'e yaz
+        Range("AH8").Value = toplam
+        ' AH7:AK7 arasını temizle
+        For i = 1 To 4
+            Cells(7, 33 + i).Value = ""
+        Next i
+    End If
+    
+    ' Son hesaplama: AD6 + AH4 + AH8 = AF9
+    toplam = Range("AD6").Value + Range("AF4").Value + Range("AH8").Value
+    Range("AF9").Value = toplam
+    
+    ' AF9 daki değer kontrolü
+    If toplam > 11 Then
+        ' 11'den büyükse dağıtma işlemi yap
+        strToplam = CStr(toplam)
+        Range("AF10").Value = CInt(Left(strToplam, 1))
+        Range("AG10").Value = CInt(Right(strToplam, 1))
+        
+        ' AF10 + AG10 = AF11
+        Range("AF11").Value = Range("AF10").Value + Range("AG10").Value
+    Else
+        ' 11 veya küçükse direkt AF11'e yaz
+        Range("AF10").Value = ""
+        Range("AG10").Value = ""
+        Range("AF11").Value = toplam
+    End If
+    
+End Sub
