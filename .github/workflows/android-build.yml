@@ -27,18 +27,19 @@ jobs:
           java-version: '17'
 
       - name: Android SDK kur
-        uses: android-actions/setup-android@v4
+        uses: android-actions/setup-android@v3
 
-      - name: Android API 37 ve Build Tools 36 kur
+      - name: Android API 35 ve Build Tools 34 kur
         shell: bash
         run: |
           set -euo pipefail
-          sdkmanager "platform-tools" "platforms;android-37" "build-tools;36.0.0"
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;34.0.0"
 
-      - name: Gradle 9.6 kur ve cache etkinlestir
+      - name: Gradle 8.9 kur ve cache etkinlestir
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '9.6.0'
+          gradle-version: '8.9'
 
       - name: Proje bilgisi
         shell: bash

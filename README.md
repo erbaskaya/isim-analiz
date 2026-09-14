@@ -7,7 +7,7 @@
 - Kotlin + Jetpack Compose + Material 3
 - Paket: `com.baskaya.isimanaliz`
 - Minimum Android: API 26 (Android 8.0)
-- Hedef/compile SDK: 37
+- Hedef/compile SDK: 35 (Android 15)
 - Yerel veri: isim sözlüğü, Ebced/element kuralları, burç yorumları, Esma tablosu, nüzul sırası eşlemesi
 - İnternet verisi: Kur'an ayetleri + Türkçe meal (yalnız sonuçta gereken sûre)
 - Önbellek: indirilen sûreler uygulamanın özel `filesDir/quran_cache` klasöründe JSON olarak tutulur
@@ -53,15 +53,15 @@ Proje GitHub Actions için hazırdır. ZIP içeriğini repository köküne yükl
 
 Derleme tamamlandığında çalışma sayfasının **Artifacts** bölümünden **Isim-Analiz-APK** paketini indirin. Paket içindeki `Isim-Analiz.apk` telefona kurulabilir debug APK'dir.
 
-Workflow kendi ortamında JDK 17, Android API 37, Build Tools 36.0.0 ve Gradle 9.6.0 kurar. Bilgisayarda Android Studio veya Android SDK kurulu olmak zorunda değildir.
+Workflow kendi ortamında JDK 17, Android API 35, Build Tools 34.0.0 ve Gradle 8.9 kurar. Bilgisayarda Android Studio veya Android SDK kurulu olmak zorunda değildir.
 
 Ayrıntılı yönerge: `GITHUB_TEK_TIK_DERLEME.md`
 
 ## Android Studio'da çalıştırma
 
-İsterseniz aynı proje Android Studio'da da açılabilir. Proje AGP 9.4.0 / Gradle 9.6 hattı ve Java 17 için hazırlanmıştır.
+İsterseniz aynı proje Android Studio'da da açılabilir. Proje AGP 8.7.3 / Gradle 8.9 ve Java 17 için hazırlanmıştır.
 
-Komut satırında Gradle 9.6 kuruluysa:
+Komut satırında Gradle 8.9 kuruluysa:
 
 ```bash
 gradle :app:assembleDebug
@@ -69,7 +69,7 @@ gradle :app:assembleDebug
 
 APK normalde `app/build/outputs/apk/debug/app-debug.apk` altında oluşur.
 
-> Bu çalışma ortamında Android SDK olmadığı için APK burada yerel olarak derlenmedi. GitHub workflow'u gerekli SDK'yı kendisi kuracak şekilde hazırlanmıştır.
+> GitHub workflow'u gerekli SDK'yı kendisi kuracak şekilde hazırlanmıştır. API 35 kararlı SDK kanalı kullanıldığı için önceki `platforms;android-37` bulunamadı hatası giderilmiştir.
 
 ## İnceleme dokümanları
 
